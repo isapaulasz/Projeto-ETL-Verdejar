@@ -1,6 +1,7 @@
 import extracao
 import transformacao
 import carga
+import relatorio
 import sys
 
 def main():
@@ -23,6 +24,9 @@ def main():
     pedidos_ok, cont_p = transformacao.transformar_pedidos(pedidos)
     print(f"transformacao: clientes emails_nulos={cont_c['emails_nulos']} estados_padronizados={cont_c['estados_padronizados']}")
     print(f"transformacao: pedidos repetidos_descartados={cont_p['repetidos_descartados']} pedidos_unicos={cont_p['pedidos_unicos']} datas_convertidas={cont_p['datas_convertidas']} valores_convertidos={cont_p['valores_convertidos']} divergentes={cont_p['divergentes']}")
+
+    # relatorio de qualidade (stretch): contadores de A1 a A6 desta execucao
+    relatorio.gerar_relatorio(cont_c, cont_p, len(clientes), len(pedidos))
 
     # carga
     resultado = carga.carregar(produtos, clientes_ok, pedidos_ok)
