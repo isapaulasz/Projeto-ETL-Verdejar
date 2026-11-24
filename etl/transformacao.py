@@ -44,12 +44,13 @@ def remover_repetidos(pedidos):
 
 
 # A6
-def marcar_divergencia(pedido):  
+def marcar_divergencia(pedido):
     novo = dict(pedido)
     novo["valor_itens"] = round(
         sum(i["quantidade"] * converter_valor(i["preco_unitario"]) for i in novo["itens"]), 2
     )
-    novo["divergente"] = abs(novo["valor_total"] - novo["valor_itens"]) > 0.01
+    diferenca_centavos = round(abs(novo["valor_total"] - novo["valor_itens"]) * 100)
+    novo["divergente"] = diferenca_centavos > 1
     return novo
 
 
