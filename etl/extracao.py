@@ -2,7 +2,6 @@
 import csv
 import json
 import os
-import sys
 import requests
 
 BASE_URL = "http://127.0.0.1:8000"
@@ -68,20 +67,3 @@ def salvar_brutos(rota, registros):
 def ler_csv(nome_arquivo):
     with open(f"insumos/dados/{nome_arquivo}.csv", newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
-
-
-def main():
-    clientes = extrair_tudo("clientes")
-    pedidos = extrair_tudo("pedidos")
-    if clientes is None or pedidos is None:
-        sys.exit(1)
-
-    salvar_brutos("clientes", clientes)
-    salvar_brutos("pedidos", pedidos)
-
-    produtos = ler_csv("produtos")
-    print(f"extracao: produtos registros={len(produtos)}")
-
-
-if __name__ == "__main__":
-    main()
