@@ -40,7 +40,7 @@ Legenda: "Admite nulo" indica se o campo pode ficar vazio no banco. Armadilhas A
 
 | Campo | Tipo | Admite nulo | Regra de transformação |
 | ----- | ---- | ----------- | ---------------------- |
-| pedidos_id | inteiro | Não | Parte da chave primária. Chave estrangeira para pedidos.id. |
+| pedido_id | inteiro | Não | Parte da chave primária. Chave estrangeira para pedidos.id. |
 | linha | inteiro | Não | Parte da chave primária. Posição do item dentro do pedido. |
 | produto_id | inteiro | Não | Chave estrangeira para produtos.produto_id. |
 | quantidade | inteiro | Não | Sem transformação. |

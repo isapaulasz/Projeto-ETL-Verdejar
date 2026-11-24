@@ -24,5 +24,10 @@ def main():
     print(f"transformacao: clientes emails_nulos={cont_c['emails_nulos']} estados_padronizados={cont_c['estados_padronizados']}")
     print(f"transformacao: pedidos repetidos_descartados={cont_p['repetidos_descartados']} pedidos_unicos={cont_p['pedidos_unicos']} datas_convertidas={cont_p['datas_convertidas']} valores_convertidos={cont_p['valores_convertidos']} divergentes={cont_p['divergentes']}")
 
+    # carga
+    resultado = carga.carregar(produtos, clientes_ok, pedidos_ok)
+    if resultado is None:
+        sys.exit(1)
+
 if __name__ == "__main__":
     main()
