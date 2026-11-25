@@ -1,0 +1,7 @@
+data_hora,armadilha,descricao,contador,total_avaliado
+2026-11-24T20:23:48-03:00,A1,e-mail ausente gravado como nulo,81,1000
+2026-11-24T20:23:48-03:00,A2,sigla de estado corrigida para maiusculas,151,1000
+2026-11-24T20:23:48-03:00,A3,data convertida de DD/MM/AAAA para AAAA-MM-DD,1037,5000
+2026-11-24T20:23:48-03:00,A4,valor_total em texto com virgula convertido para numero,1255,5000
+2026-11-24T20:23:48-03:00,A5,pedido repetido descartado,100,5100
+2026-11-24T20:23:48-03:00,A6,pedido com valor_total diferente da soma dos itens,238,5000
