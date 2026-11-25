@@ -1,7 +1,7 @@
-import extracao
-import transformacao
-import carga
-import relatorio
+from etl import extracao
+from etl import transformacao
+from etl import carga
+from etl import relatorio
 import sys
 
 def main():
